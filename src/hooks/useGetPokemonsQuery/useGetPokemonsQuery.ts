@@ -21,7 +21,7 @@ const useGetPokemonsQuery = (props: UseGetPokemonsQueryProps) => {
       } catch (err) {
         console.error(err)
       } finally {
-        setLoading(true)
+        setLoading(false)
       }
     })()
   }, [types])
