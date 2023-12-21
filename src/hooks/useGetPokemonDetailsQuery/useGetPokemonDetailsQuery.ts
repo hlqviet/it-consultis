@@ -17,7 +17,7 @@ const useGetPokemonDetailsQuery = (props: UseGetPokemonDetailsQueryProps) => {
     ;(async () => {
       try {
         const responses: PokemonDetailsResponse[] =
-          pokedex.getPokemonByName(pokemons)
+          await pokedex.getPokemonByName(pokemons)
         const pokemonDetails: PokemonDetails[] = responses.map(
           ({ name, sprites }) => ({
             name,
